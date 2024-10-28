@@ -10,15 +10,15 @@ jobs:
         node-version: [12, 14, 16]
         operating-system: [ubuntu-latest, windows-latest]
     
-    runs-on: ${{ Matix.operating-system }}
+    runs-on: ${{ Matrix.operating-system }}
     steps:
       - name: Get code
         uses: actions/checkout@v3
       - name: install NodeJS
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ Matix.node-version }}
-      - name: install Dependencies
+          node-version: ${{ Matrix.node-version }}
+      - name: Install Dependencies
         run: npm ci
       - name: Build Project
         run: npm run build
