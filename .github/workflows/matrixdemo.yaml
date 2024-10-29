@@ -1,8 +1,5 @@
 name: Matix Demo
-on: 
-  push:
-    branches: 
-      - master 
+on: push 
 jobs:
   build:
     strategy:
